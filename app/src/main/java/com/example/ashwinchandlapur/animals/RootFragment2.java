@@ -7,13 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-/**
- * Example about replacing fragments inside a ViewPager. I'm using
- * android-support-v7 to maximize the compatibility.
- *
- * @author Dani Lao (@dani_lao)
- *
- */
+
 public class RootFragment2 extends Fragment {
 
     private static final String TAG = "RootFragment";

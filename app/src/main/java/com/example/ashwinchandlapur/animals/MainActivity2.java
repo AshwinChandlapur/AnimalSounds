@@ -9,13 +9,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 
-/**
- * Example about replacing fragments inside a ViewPager. I'm using
- * android-support-v7 to maximize the compatibility.
- *
- * @author Dani Lao (@dani_lao)
- *
- */
+
 public class MainActivity2 extends ActionBarActivity {
 
     // For this example, only two pages

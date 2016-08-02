@@ -14,13 +14,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-/**
- * Example about replacing fragments inside a ViewPager. I'm using
- * android-support-v7 to maximize the compatibility.
- *
- * @author Dani Lao (@dani_lao)
- *
- */
+
 public class FourthFragment extends Fragment {
     TextView t;
     private static final String TAG = "SecondFragment";
