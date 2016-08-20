@@ -21,6 +21,7 @@ public class FirstFragment extends Fragment {
 
     private static final String TAG = "FirstFragment";
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -31,7 +32,7 @@ public class FirstFragment extends Fragment {
 
 
         ImageButton btn=(ImageButton)view.findViewById(R.id.btn);
-        //ImageButton btn1=(ImageButton)view.findViewById(R.id.btn1);
+        ImageButton btn1=(ImageButton)view.findViewById(R.id.btn1);
        // Button btn = (Button) view.findViewById(R.id.btn);
         final MediaPlayer sound= MediaPlayer.create(view.getContext(),R.raw.horse);
         sound.start();
@@ -67,28 +68,28 @@ public class FirstFragment extends Fragment {
             }
         });
 
-    //    btn1.setOnClickListener(new OnClickListener() {
+       btn1.setOnClickListener(new OnClickListener() {
 
-      //      @Override
-      //      public void onClick(View v) {
-       //         FragmentTransaction trans = getFragmentManager()
-       //                 .beginTransaction();
+          @Override
+        public void onClick(View v) {
+               FragmentTransaction trans = getFragmentManager()
+                       .beginTransaction();
 				/*
 				 * IMPORTANT: We use the "root frame" defined in
 				 * "root_fragment.xml" as the reference to replace fragment
 				 */
-       //         trans.replace(R.id.root_frame, new FirstFragment());
-      //          sound.stop();
+                trans.replace(R.id.root_frame, new SeventhFragment());
+               sound.stop();
 				/*
 				 * IMPORTANT: The following lines allow us to add the fragment
 				 * to the stack and return to it later, by pressing back
 				 */
-        //        trans.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-       //         trans.addToBackStack(null);
+                trans.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+               trans.addToBackStack(null);
 
-        //        trans.commit();
-       //     }
-        //});
+                trans.commit();
+            }
+        });
 
         return view;
     }

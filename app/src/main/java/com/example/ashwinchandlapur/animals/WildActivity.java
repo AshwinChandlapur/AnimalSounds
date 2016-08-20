@@ -8,12 +8,13 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
+import android.view.Window;
 
 
-public class MainActivity2 extends ActionBarActivity {
+public class WildActivity extends ActionBarActivity {
 
     // For this example, only two pages
-    static final int NUM_ITEMS = 2;
+    static final int NUM_ITEMS = 3;
 
     ViewPager mPager;
     SlidePagerAdapter mPagerAdapter;
@@ -22,8 +23,8 @@ public class MainActivity2 extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-      //  this.supportrequestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.activity_main2);
+        //  this.supportrequestWindowFeature(Window.FEATURE_NO_TITLE);
+        setContentView(R.layout.wild_activity);
 
 		/* Instantiate a ViewPager and a PagerAdapter. */
         mPager = (ViewPager) findViewById(R.id.pager);
@@ -31,7 +32,11 @@ public class MainActivity2 extends ActionBarActivity {
         mPager.setAdapter(mPagerAdapter);
 
     }
-
+    @Override
+    public void onBackPressed() {
+        Intent intent=new Intent(WildActivity.this,ScrollingActivity.class);
+        startActivity(intent);
+    }
     /* PagerAdapter class */
     public class SlidePagerAdapter extends FragmentPagerAdapter {
         public SlidePagerAdapter(FragmentManager fm) {
@@ -45,9 +50,11 @@ public class MainActivity2 extends ActionBarActivity {
 			 * a container for other fragments
 			 */
             if (position == 0)
-                return new RootFragment2();
-            else
+                return new WildrootFragment();
+            else if(position==1)
                 return new StaticFragment();
+            else
+                return new StaticFragments();
         }
 
         @Override
@@ -57,7 +64,7 @@ public class MainActivity2 extends ActionBarActivity {
     }
     public void home(View v)
     {
-        Intent intent=new Intent(MainActivity2.this,ScrollingActivity.class);
+        Intent intent=new Intent(WildActivity.this,ScrollingActivity.class);
         startActivity(intent);
     }
 }

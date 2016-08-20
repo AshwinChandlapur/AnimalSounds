@@ -1,5 +1,6 @@
 package com.example.ashwinchandlapur.animals;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -9,46 +10,63 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
 
-public class EightFragment extends Fragment {
+public class XarmFragment2 extends Fragment {
     TextView t;
-    private static final String TAG = "SecondFragment";
+
+    private static final String TAG = "FirstFragment";
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+
         // Inflate the layout for this fragment
-        View view = inflater
-                .inflate(R.layout.fragment_eight, container, false);
+        View view = inflater.inflate(R.layout.xarm2_fragment, container, false);
+
+
+        ImageButton btn=(ImageButton)view.findViewById(R.id.btn);
+        ImageButton btn1=(ImageButton)view.findViewById(R.id.btn1);
+        // Button btn = (Button) view.findViewById(R.id.btn);
+        final MediaPlayer sound= MediaPlayer.create(view.getContext(),R.raw.sheep);
+        sound.start();
+
 
         t=(TextView)view.findViewById(R.id.tv);
 
         Typeface myFont = Typeface.createFromAsset(getActivity().getAssets(),"fonts/Kaushan.otf");
         t.setTypeface(myFont);
-        //ImageButton btn=(ImageButton)view.findViewById(R.id.btn);
-        ImageButton btn1=(ImageButton)view.findViewById(R.id.btn1);
-        // Button btn = (Button) view.findViewById(R.id.btn);
-        final MediaPlayer sound= MediaPlayer.create(view.getContext(),R.raw.rabbit);
-        sound.start();
 
-        //Button btn = (Button) view.findViewById(R.id.btn);
 
-      /*  btn.setOnClickListener(new OnClickListener() {
+
+        btn.setOnClickListener(new OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 FragmentTransaction trans = getFragmentManager()
                         .beginTransaction();
-                trans.replace(R.id.root_frame, new EightFragment());
+				/*
+				 * IMPORTANT: We use the "root frame" defined in
+				 * "root_fragment.xml" as the reference to replace fragment
+				 */
+                trans.replace(R.id.root_frame, new XarmFragment3());
                 sound.stop();
+				/*
+				 * IMPORTANT: The following lines allow us to add the fragment
+				 * to the stack and return to it later, by pressing back
+				 */
                 trans.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
                 trans.addToBackStack(null);
+
                 trans.commit();
             }
-        });*/
+        });
 
         btn1.setOnClickListener(new OnClickListener() {
 
@@ -60,7 +78,7 @@ public class EightFragment extends Fragment {
 				 * IMPORTANT: We use the "root frame" defined in
 				 * "root_fragment.xml" as the reference to replace fragment
 				 */
-                trans.replace(R.id.root_frame, new SeventhFragment());
+                trans.replace(R.id.root_frame, new XarmFragment1());
                 sound.stop();
 				/*
 				 * IMPORTANT: The following lines allow us to add the fragment
@@ -75,5 +93,7 @@ public class EightFragment extends Fragment {
 
         return view;
     }
+
+
 
 }

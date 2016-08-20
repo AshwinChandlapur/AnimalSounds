@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.Window;
 
 
-public class MainActivity extends ActionBarActivity {
+public class XarmActivity extends ActionBarActivity {
 
     // For this example, only two pages
     static final int NUM_ITEMS = 3;
@@ -23,8 +23,8 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-      //  this.supportrequestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.activity_main);
+        //  this.supportrequestWindowFeature(Window.FEATURE_NO_TITLE);
+        setContentView(R.layout.xarm_activity);
 
 		/* Instantiate a ViewPager and a PagerAdapter. */
         mPager = (ViewPager) findViewById(R.id.pager);
@@ -34,7 +34,7 @@ public class MainActivity extends ActionBarActivity {
     }
     @Override
     public void onBackPressed() {
-        Intent intent=new Intent(MainActivity.this,ScrollingActivity.class);
+        Intent intent=new Intent(XarmActivity.this,ScrollingActivity.class);
         startActivity(intent);
     }
     /* PagerAdapter class */
@@ -50,7 +50,7 @@ public class MainActivity extends ActionBarActivity {
 			 * a container for other fragments
 			 */
             if (position == 0)
-                return new RootFragment();
+                return new XarmrootFragment();
             else if(position==1)
                 return new StaticFragment();
             else
@@ -64,7 +64,7 @@ public class MainActivity extends ActionBarActivity {
     }
     public void home(View v)
     {
-        Intent intent=new Intent(MainActivity.this,ScrollingActivity.class);
+        Intent intent=new Intent(XarmActivity.this,ScrollingActivity.class);
         startActivity(intent);
     }
 }

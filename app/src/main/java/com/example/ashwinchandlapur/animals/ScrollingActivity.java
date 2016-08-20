@@ -36,9 +36,19 @@ public class ScrollingActivity extends AppCompatActivity {
 
     public void wild(View view)
     {
-        Intent intent=new Intent(ScrollingActivity.this,MainActivity.class);
+        Intent intent=new Intent(ScrollingActivity.this,WildActivity.class);
         startActivity(intent);
     }
+
+    public void farm(View view)
+    {
+        Intent intent=new Intent(ScrollingActivity.this,XarmActivity.class);
+        startActivity(intent);
+    }
+
+
+
+
 
 
 }
