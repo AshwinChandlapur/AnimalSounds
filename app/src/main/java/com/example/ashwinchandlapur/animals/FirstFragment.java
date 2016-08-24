@@ -1,6 +1,5 @@
 package com.example.ashwinchandlapur.animals;
 
-import android.content.Intent;
 import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -10,8 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.view.Window;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -78,7 +75,7 @@ public class FirstFragment extends Fragment {
 				 * IMPORTANT: We use the "root frame" defined in
 				 * "root_fragment.xml" as the reference to replace fragment
 				 */
-                trans.replace(R.id.root_frame, new SeventhFragment());
+                trans.replace(R.id.root_frame, new SeventhsFragment());
                sound.stop();
 				/*
 				 * IMPORTANT: The following lines allow us to add the fragment

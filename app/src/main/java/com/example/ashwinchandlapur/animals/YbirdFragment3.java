@@ -16,7 +16,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 
-public class WildFragment8 extends Fragment {
+public class YbirdFragment3 extends Fragment {
     TextView t;
 
     private static final String TAG = "FirstFragment";
@@ -28,13 +28,13 @@ public class WildFragment8 extends Fragment {
 
 
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.wild8_fragment, container, false);
+        View view = inflater.inflate(R.layout.ybird3_fragment, container, false);
 
 
         ImageButton btn=(ImageButton)view.findViewById(R.id.btn);
         ImageButton btn1=(ImageButton)view.findViewById(R.id.btn1);
         // Button btn = (Button) view.findViewById(R.id.btn);
-        final MediaPlayer sound= MediaPlayer.create(view.getContext(),R.raw.panda);
+        final MediaPlayer sound= MediaPlayer.create(view.getContext(),R.raw.peacock);
         sound.start();
 
 
@@ -55,7 +55,7 @@ public class WildFragment8 extends Fragment {
 				 * IMPORTANT: We use the "root frame" defined in
 				 * "root_fragment.xml" as the reference to replace fragment
 				 */
-                trans.replace(R.id.root_frames, new WildFragment1());
+                trans.replace(R.id.root_framey, new YbirdFragment4());
                 sound.stop();
 				/*
 				 * IMPORTANT: The following lines allow us to add the fragment
@@ -78,7 +78,7 @@ public class WildFragment8 extends Fragment {
 				 * IMPORTANT: We use the "root frame" defined in
 				 * "root_fragment.xml" as the reference to replace fragment
 				 */
-                trans.replace(R.id.root_frames, new WildFragment7());
+                trans.replace(R.id.root_framey, new YbirdFragment2());
                 sound.stop();
 				/*
 				 * IMPORTANT: The following lines allow us to add the fragment

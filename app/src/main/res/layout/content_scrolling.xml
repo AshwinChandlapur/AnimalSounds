@@ -58,6 +58,22 @@
             android:layout_centerHorizontal="true"
             android:onClick="farm" />
 
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/woodpekker"
+            android:adjustViewBounds="true"
+            android:maxWidth="250dp"
+            android:maxHeight="250dp"
+            android:scaleType="fitCenter"
+            android:clickable="true"
+            android:layout_below="@+id/farm"
+            android:id="@+id/bird"
+            android:paddingTop="20dp"
+            android:background="@null"
+            android:layout_centerHorizontal="true"
+            android:onClick="bird" />
+
     </LinearLayout>
 
 

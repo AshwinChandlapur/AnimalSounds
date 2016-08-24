@@ -26,7 +26,7 @@ public class WildrootFragment extends Fragment {
 		 * "real" fragment
 		 * http://soundbible.com/tags-animal.html
 		 */
-        transaction.replace(R.id.root_frame, new WildFragment1());
+        transaction.replace(R.id.root_frames, new WildFragment1());
 
         transaction.commit();
 

@@ -1,5 +1,6 @@
 package com.example.ashwinchandlapur.animals;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -9,32 +10,40 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
 
-public class SeventhFragment extends Fragment {
+public class YbirdFragment6 extends Fragment {
     TextView t;
-    private static final String TAG = "SecondFragment";
+
+    private static final String TAG = "FirstFragment";
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+
         // Inflate the layout for this fragment
-        View view = inflater
-                .inflate(R.layout.seventh_fragment, container, false);
+        View view = inflater.inflate(R.layout.ybird6_fragment, container, false);
+
+
+        ImageButton btn=(ImageButton)view.findViewById(R.id.btn);
+        ImageButton btn1=(ImageButton)view.findViewById(R.id.btn1);
+        // Button btn = (Button) view.findViewById(R.id.btn);
+        final MediaPlayer sound= MediaPlayer.create(view.getContext(),R.raw.mockingbird);
+        sound.start();
+
 
         t=(TextView)view.findViewById(R.id.tv);
 
         Typeface myFont = Typeface.createFromAsset(getActivity().getAssets(),"fonts/Kaushan.otf");
         t.setTypeface(myFont);
-        ImageButton btn=(ImageButton)view.findViewById(R.id.btn);
-        ImageButton btn1=(ImageButton)view.findViewById(R.id.btn1);
-        // Button btn = (Button) view.findViewById(R.id.btn);
-        final MediaPlayer sound= MediaPlayer.create(view.getContext(),R.raw.ginny);
-        sound.start();
 
-        //Button btn = (Button) view.findViewById(R.id.btn);
+
 
         btn.setOnClickListener(new OnClickListener() {
 
@@ -42,10 +51,19 @@ public class SeventhFragment extends Fragment {
             public void onClick(View v) {
                 FragmentTransaction trans = getFragmentManager()
                         .beginTransaction();
-                trans.replace(R.id.root_frame, new FirstFragment());
+				/*
+				 * IMPORTANT: We use the "root frame" defined in
+				 * "root_fragment.xml" as the reference to replace fragment
+				 */
+                trans.replace(R.id.root_framey, new YbirdFragment1());
                 sound.stop();
+				/*
+				 * IMPORTANT: The following lines allow us to add the fragment
+				 * to the stack and return to it later, by pressing back
+				 */
                 trans.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
                 trans.addToBackStack(null);
+
                 trans.commit();
             }
         });
@@ -60,7 +78,7 @@ public class SeventhFragment extends Fragment {
 				 * IMPORTANT: We use the "root frame" defined in
 				 * "root_fragment.xml" as the reference to replace fragment
 				 */
-                trans.replace(R.id.root_frame, new SixthFragment());
+                trans.replace(R.id.root_framey, new YbirdFragment5());
                 sound.stop();
 				/*
 				 * IMPORTANT: The following lines allow us to add the fragment
@@ -75,5 +93,7 @@ public class SeventhFragment extends Fragment {
 
         return view;
     }
+
+
 
 }

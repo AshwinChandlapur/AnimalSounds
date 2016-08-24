@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.view.Window;
 
 
-public class XarmrootFragment extends Fragment {
+public class YbirdrootFragment extends Fragment {
 
     private static final String TAG = "RootFragment";
 
@@ -17,7 +17,7 @@ public class XarmrootFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 		/* Inflate the layout for this fragment */
-        View view = inflater.inflate(R.layout.xarmroot_fragment, container, false);
+        View view = inflater.inflate(R.layout.ybirdroot_fragment, container, false);
 
         FragmentTransaction transaction = getFragmentManager()
                 .beginTransaction();
@@ -26,7 +26,7 @@ public class XarmrootFragment extends Fragment {
 		 * "real" fragment
 		 * http://soundbible.com/tags-animal.html
 		 */
-        transaction.replace(R.id.root_framex, new XarmFragment1());
+        transaction.replace(R.id.root_framey, new YbirdFragment1());
 
         transaction.commit();
 

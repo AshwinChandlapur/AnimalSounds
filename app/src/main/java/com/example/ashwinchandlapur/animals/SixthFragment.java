@@ -42,7 +42,7 @@ public class SixthFragment extends Fragment {
             public void onClick(View v) {
                 FragmentTransaction trans = getFragmentManager()
                         .beginTransaction();
-                trans.replace(R.id.root_frame, new SeventhFragment());
+                trans.replace(R.id.root_frame, new FirstFragment());
                 sound.stop();
                 trans.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
                 trans.addToBackStack(null);

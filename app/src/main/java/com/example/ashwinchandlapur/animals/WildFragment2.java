@@ -55,7 +55,7 @@ public class WildFragment2 extends Fragment {
 				 * IMPORTANT: We use the "root frame" defined in
 				 * "root_fragment.xml" as the reference to replace fragment
 				 */
-                trans.replace(R.id.root_frame, new WildFragment3());
+                trans.replace(R.id.root_frames, new WildFragment3());
                 sound.stop();
 				/*
 				 * IMPORTANT: The following lines allow us to add the fragment
@@ -78,7 +78,7 @@ public class WildFragment2 extends Fragment {
 				 * IMPORTANT: We use the "root frame" defined in
 				 * "root_fragment.xml" as the reference to replace fragment
 				 */
-                trans.replace(R.id.root_frame, new WildFragment1());
+                trans.replace(R.id.root_frames, new WildFragment1());
                 sound.stop();
 				/*
 				 * IMPORTANT: The following lines allow us to add the fragment

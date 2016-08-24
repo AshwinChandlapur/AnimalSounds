@@ -55,7 +55,7 @@ public class XarmFragment2 extends Fragment {
 				 * IMPORTANT: We use the "root frame" defined in
 				 * "root_fragment.xml" as the reference to replace fragment
 				 */
-                trans.replace(R.id.root_frame, new XarmFragment3());
+                trans.replace(R.id.root_framex, new XarmFragment3());
                 sound.stop();
 				/*
 				 * IMPORTANT: The following lines allow us to add the fragment
@@ -78,7 +78,7 @@ public class XarmFragment2 extends Fragment {
 				 * IMPORTANT: We use the "root frame" defined in
 				 * "root_fragment.xml" as the reference to replace fragment
 				 */
-                trans.replace(R.id.root_frame, new XarmFragment1());
+                trans.replace(R.id.root_framex, new XarmFragment1());
                 sound.stop();
 				/*
 				 * IMPORTANT: The following lines allow us to add the fragment
